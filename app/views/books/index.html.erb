@@ -1,0 +1,27 @@
+<h1>Books#index</h1>
+
+<!-- 検索窓 -->
+<%= form_tag('/books/search', method: :get) do %>
+   <input class="search__query" name="keyword" placeholder="タイトルで検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
+ <% end %>
+<!-- 検索窓終了 -->
+
+
+<!-- ページネーション -->
+<div class="pagenate" %>
+	<%= paginate(@books) %>
+</div>
+<!-- ページネーション終了 -->
+
+
+<!-- 本情報の一覧を表示 -->
+<div id="index">
+	<% @books.each do |book| %>
+		<div class="book">
+			<a href=" books/<%= book[:id] %>"><img src="<%= book.image_url %>" width="100px"></a><br>
+			<%= book.title %><br>
+		</div>
+	<% end %>
+</div>
+
+<%= paginate(@books) %>

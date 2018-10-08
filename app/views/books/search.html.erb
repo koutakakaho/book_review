@@ -1,0 +1,10 @@
+<h1>search.html.erb</h1>
+
+<%= form_tag('/books/search', method: :get) do %>
+   <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
+ <% end %>
+<!-- 検索結果を表示 -->
+ <% @books.each do |book| %>
+ 	<%= book.title %><br>
+ 	<img src="<%= book.image_url %>"><br>
+ <% end %>

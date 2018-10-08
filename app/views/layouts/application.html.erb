@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookReview</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+<!-- body始まり -->
+  <body>
+
+  <!-- header始まり -->
+  <!-- pattial: header -->
+
+  <%= render partial: "layouts/header" %>
+  <!-- header終わり -->
+
+  <!-- wrapper始まり -->
+    <div id="wrapper">
+      <div class="main-content">
+        <div class="common">
+          <%= yield %>
+        </div>
+      </div>
+      <aside></aside>
+    </div>
+  <!-- wrapper終わり -->
+
+  <!-- fooer始まり -->
+    <footer></footer>
+
+  <!-- footer終わり -->
+   
+  </body>
+</html>

@@ -1,0 +1,56 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body,h1,h2,h3,h4,h5,h6,p {
+	margin: 0 auto;
+}
+
+//headerの修飾始まり
+
+
+header {
+	width: 100%;
+	height:150px;
+	background-color: #ff99cc
+}
+
+h1 {
+	text-align: center;
+}
+
+nav .globai-nav ul{
+	
+}
+nav .global-nav ul li{
+	float: right;
+	list-style: none;
+}
+
+nav .global-nav ul li a{
+	
+}
+
+
+//hedaerの修飾終わり
+
+//wrapperの修飾始まり
+
+
+.common {
+	margin: 0 auto;
+	width: 960px;
+}
+
+
+// indexページの修飾
+
+#index nav .span a{
+	text-decoration: none;
+	color: #eeeeee;
+}
+
+#index .book {
+	margin-top: 20px;
+	box-shadow: 2px 2px 4px
+}

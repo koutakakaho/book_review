@@ -6,6 +6,9 @@ body,h1,h2,h3,h4,h5,h6,p {
 	margin: 0 auto;
 }
 
+html, body{
+	height: 100px;
+}
 //headerの修飾始まり
 
 
@@ -39,6 +42,7 @@ nav .global-nav ul li a{
 
 #content {
 	width: 1080px;
+	height: 100%; //子要素sidebarの高さの基準
 	margin: 0 auto;
 }
 

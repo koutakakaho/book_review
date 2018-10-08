@@ -5,9 +5,14 @@
 
 <%= link_to "一覧に戻る", books_path %>
 
-<%= link_to "レビューを書く", "#{@book.id}/reviews/new" %>
+<%= link_to "レビューを書く", "#{@book.id}/reviews/new" %><br>
 
-<% @book.reviews.each do |review| %>
-	<%= review.editor %>
-	<%= review.review %>
-<% end %>
+<!-- review一覧始まり -->
+<civ class="reviews">
+  <% @book.reviews.each do |review| %>
+	  <div class="review">
+		投稿者：<%= review.editor %><br>
+		レビュー：<%= review.review %>
+	  </div>
+	<% end %>
+</civ>

@@ -37,11 +37,25 @@ nav .global-nav ul li a{
 //wrapperの修飾始まり
 
 
-.common {
+#content {
+	width: 1080px;
 	margin: 0 auto;
-	width: 960px;
 }
 
+#main {
+	float: left;
+	width: 800px;
+}
+
+//サイドバーの設定
+#sidebar {
+	width: 250px;
+	margin-top: 100px;
+	margin-left: 10px;
+	background-color: #ff99cc;
+	float:right;
+	height: 100%;
+}
 
 // indexページの修飾
 
@@ -51,6 +65,23 @@ nav .global-nav ul li a{
 }
 
 #index .book {
-	margin-top: 20px;
-	box-shadow: 2px 2px 4px
+	width: 350px;
+	margin-top: 30px;
+	box-shadow: 2px 2px 4px;
+	float: left;
+	margin-left: 30px;
+	height: 250px;
+}
+
+
+//clearfix
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+// footer
+#footer {
+	margin-top: 30px;
 }

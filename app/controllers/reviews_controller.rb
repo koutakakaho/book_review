@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :timeline
+  before_action :timeline, :authenticate_user!
 
   def new
   	@book = Book.find(params[:book_id])
@@ -42,6 +42,6 @@ class ReviewsController < ApplicationController
 
   private
   def params_review
-  	params.require(:review).permit(:editor,  :review, :rank, :book_id)
+  	params.require(:review).permit(:editor,  :review, :rank, :book_id, :user_id)
   end
 end

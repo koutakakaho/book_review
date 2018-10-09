@@ -4,7 +4,6 @@
 <a href="#"><img src="<%= @book.image_url %>"></a><br>
 
 <%= link_to "一覧に戻る", books_path %>
-
 <%= link_to "レビューを書く", "#{@book.id}/reviews/new" %><br>
 
 <!-- review一覧始まり -->
@@ -12,7 +11,9 @@
   <% @book.reviews.each do |review| %>
 	  <div class="review">
 		投稿者：<%= review.editor %><br>
-		レビュー：<%= review.review %>
+		レビュー：<%= review.review %><br>
+		<%= link_to "レビューを修正する", "#{@book.id}/reviews/#{review.id}/edit" %><br>
+		<%= link_to "削除する", book_review_path(@book, review), method: :delete %>
 	  </div>
 	<% end %>
 </civ>

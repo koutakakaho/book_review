@@ -1,2 +1,9 @@
-<h1>Reviews#edit</h1>
-<p>Find me in app/views/reviews/edit.html.erb</p>
+<h1>ブックレビューの修正</h1>
+
+<%= form_for ([@book, @review]) do |f| %>
+  <%= f.text_field :editor %>
+  <%= f.text_area :review %>
+  <%= f.number_field :rank, max: 10, min:1 %>
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <%= f.submit %>
+<% end %>

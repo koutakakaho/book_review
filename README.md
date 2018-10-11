@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# book_review
+本のレビューサイト作成中
+>>>>>>> 373a8abbd3260a7ca065c99242dffe8822580c91

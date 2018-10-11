@@ -1,8 +1,8 @@
 class BooksController < ApplicationController
-  before_action :timeline
+  before_action :timeline, :ranking
 
   def index
-  	@books = Book.order("id DESC").page(params[:page]).per(10)
+  	@books = Book.order("id DESC").page(params[:page]).per(15)
   end
 
   def show

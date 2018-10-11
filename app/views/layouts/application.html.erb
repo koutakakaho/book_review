@@ -15,10 +15,22 @@
 
   <!-- header始まり -->
   <!-- pattial: header -->
-
   <%= render partial: "layouts/header" %>
   <!-- header終わり -->
 
+  <!-- ランキング始まり -->
+  <div id="ranking" >
+    <h2>ランキング</h2>
+    <% if user_signed_in? %>
+    <% @rankings.each.with_index(1) do |ranking,i| %>
+      <%= i %>
+    
+      <img src="<%= ranking.image_url %>" width="200px" >
+    <% end %>
+    <% end %>
+  </div>
+  <!-- ランキング終わり -->
+  
   <!-- wrapper始まり -->
     <div id="wrapper">
       <div id="content" class="clearfix">
@@ -26,14 +38,14 @@
           <%= yield %>
         </div>
       
-
   <!-- sidebar始まり -->
       <% if user_signed_in? %>
         <%= render partial: "layouts/sidebar" %>
       <% end %>
   <!-- sidebar終わり -->
 
-  
+        </div>
+        <!-- content終わり -->
     </div>
   <!-- wrapper終わり -->
 

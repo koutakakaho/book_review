@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :timeline, :authenticate_user!
+  before_action :timeline, :authenticate_user!, :ranking
 
   def new
   	@book = Book.find(params[:book_id])
